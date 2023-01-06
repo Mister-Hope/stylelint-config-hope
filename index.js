@@ -79,6 +79,18 @@ module.exports = {
     "value-no-vendor-prefix": true,
     "order/order": [
       [
+        {
+          type: "at-rule",
+          name: "use",
+        },
+        {
+          type: "at-rule",
+          name: "forward",
+        },
+        {
+          type: "at-rule",
+          name: "import",
+        },
         "dollar-variables",
         "custom-properties",
         "at-rules",
@@ -114,6 +126,7 @@ module.exports = {
         },
       ],
       {
+        unspecified: "ignore",
         severity: "warning",
       },
     ],
