@@ -1,31 +1,18 @@
 "use strict";
 
 module.exports = {
-  extends: [
-    "stylelint-config-standard",
-    "stylelint-config-standard-scss",
-    "stylelint-config-prettier",
-  ],
+  extends: ["stylelint-config-standard", "stylelint-config-standard-scss"],
   plugins: ["stylelint-order"],
   rules: {
     "at-rule-disallowed-list": ["debug"],
     "at-rule-no-vendor-prefix": true,
     "block-no-empty": true,
-    "block-opening-brace-space-before": "always",
     "color-hex-alpha": "never",
-    "color-hex-case": "lower",
     "color-hex-length": "short",
     "color-named": "never",
     "color-no-invalid-hex": true,
-    "declaration-bang-space-after": "never",
-    "declaration-bang-space-before": "always",
-    "declaration-block-semicolon-newline-after": "always",
-    "declaration-block-semicolon-space-before": "never",
     "declaration-block-single-line-max-declarations": 1,
-    "declaration-colon-space-after": "always-single-line",
-    "declaration-colon-space-before": "never",
     "declaration-empty-line-before": null,
-    "function-comma-space-after": "always-single-line",
     "function-url-quotes": "always",
     "length-zero-no-unit": true,
     "max-nesting-depth": [
@@ -41,10 +28,6 @@ module.exports = {
       },
     ],
     "media-feature-name-no-vendor-prefix": true,
-    "media-feature-parentheses-space-inside": "never",
-    "no-missing-end-of-source-newline": true,
-    "number-leading-zero": "always",
-    "number-no-trailing-zeros": true,
     "property-no-unknown": true,
     "property-no-vendor-prefix": null,
     "rule-empty-line-before": [
@@ -61,7 +44,6 @@ module.exports = {
           "Selector should be written in lowercase with hyphens (selector-class-pattern)",
       },
     ],
-    "selector-list-comma-newline-after": "always",
     "selector-max-compound-selectors": 3,
     "selector-max-id": 1,
     "selector-no-vendor-prefix": true,
@@ -69,7 +51,6 @@ module.exports = {
     "selector-pseudo-element-no-unknown": true,
     "selector-type-no-unknown": true,
     "shorthand-property-no-redundant-values": true,
-    "string-quotes": "double",
     "unit-no-unknown": [
       true,
       {
