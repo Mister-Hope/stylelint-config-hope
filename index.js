@@ -202,7 +202,7 @@ module.exports = {
             "max-height",
             "margin",
             "margin-block",
-            "margin-line",
+            "margin-inline",
             "margin-top",
             "margin-right",
             "margin-bottom",
