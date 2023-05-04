@@ -1,16 +1,14 @@
 "use strict";
 
 module.exports = {
-  extends: ["stylelint-config-standard", "stylelint-config-standard-scss"],
+  extends: ["stylelint-config-standard-scss"],
   plugins: ["stylelint-order"],
   rules: {
     "at-rule-disallowed-list": ["debug"],
     "at-rule-no-vendor-prefix": true,
-    "block-no-empty": true,
     "color-hex-alpha": "never",
     "color-hex-length": "short",
     "color-named": "never",
-    "color-no-invalid-hex": true,
     "declaration-block-single-line-max-declarations": 1,
     "declaration-empty-line-before": null,
     "function-url-quotes": "always",
@@ -28,7 +26,6 @@ module.exports = {
       },
     ],
     "media-feature-name-no-vendor-prefix": true,
-    "property-no-unknown": true,
     "property-no-vendor-prefix": null,
     "rule-empty-line-before": [
       "always-multi-line",
@@ -44,16 +41,16 @@ module.exports = {
           "Selector should be written in lowercase with hyphens (selector-class-pattern)",
       },
     ],
-    "selector-max-compound-selectors": 3,
+    "selector-max-compound-selectors": 4,
     "selector-max-id": 1,
     "selector-no-vendor-prefix": true,
     "selector-pseudo-element-colon-notation": "double",
     "selector-pseudo-element-no-unknown": true,
-    "selector-type-no-unknown": true,
     "shorthand-property-no-redundant-values": true,
     "unit-no-unknown": [
       true,
       {
+        // wechat miniprogram
         ignoreUnits: ["rpx"],
       },
     ],
@@ -429,21 +426,7 @@ module.exports = {
         severity: "warning",
       },
     ],
-    "scss/at-extend-no-missing-placeholder": true,
-    "scss/at-function-pattern": "^[a-z]+([a-z0-9-]+[a-z0-9]+)?$",
-    "scss/at-import-no-partial-leading-underscore": true,
     "scss/at-import-partial-extension-blacklist": ["scss"],
-    "scss/at-mixin-pattern": "^[a-z]+([a-z0-9-]+[a-z0-9]+)?$",
-    "scss/at-rule-no-unknown": true,
-    "scss/dollar-variable-empty-line-before": [
-      "always",
-      {
-        except: ["first-nested", "after-comment", "after-dollar-variable"],
-      },
-    ],
-    "scss/dollar-variable-colon-space-after": "always",
-    "scss/dollar-variable-colon-space-before": "never",
-    "scss/percent-placeholder-pattern": "^[a-z]+([a-z0-9-]+)?$",
     "scss/selector-no-redundant-nesting-selector": true,
   },
 };
