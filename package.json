@@ -18,7 +18,7 @@
   "author": {
     "email": "mister-hope@outlook.com",
     "name": "Mr.Hope",
-    "url": "https://mrhope.site"
+    "url": "https://mister-hope.com"
   },
   "main": "index.js",
   "files": [
@@ -28,16 +28,16 @@
     "lint": "prettier --check --write ."
   },
   "dependencies": {
-    "postcss": "^8.4.23",
-    "stylelint-config-standard-scss": "^9.0.0",
+    "postcss": "^8.4.29",
+    "stylelint-config-standard-scss": "^11.0.0",
     "stylelint-order": "^6.0.3"
   },
   "peerDependencies": {
-    "stylelint": "^15.0.0"
+    "stylelint": "^15.10.0"
   },
-  "packageManager": "pnpm@8.4.0",
+  "packageManager": "pnpm@8.7.4",
   "devDependencies": {
-    "prettier": "2.8.8",
-    "stylelint": "15.6.1"
+    "prettier": "3.0.3",
+    "stylelint": "15.10.3"
   }
 }

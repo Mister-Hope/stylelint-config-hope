@@ -87,15 +87,7 @@ module.exports = {
         },
         {
           type: "at-rule",
-          name: "if",
-        },
-        {
-          type: "at-rule",
-          name: "else if",
-        },
-        {
-          type: "at-rule",
-          name: "else",
+          selector: "^(?:if|else if|else|for|each)",
         },
         "rules",
         {
