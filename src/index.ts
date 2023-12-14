@@ -1,6 +1,6 @@
-"use strict";
+import { Config } from "stylelint";
 
-module.exports = {
+const config: Config = {
   extends: ["stylelint-config-standard-scss"],
   plugins: ["stylelint-order"],
   rules: {
@@ -428,3 +428,5 @@ module.exports = {
     "scss/selector-no-redundant-nesting-selector": true,
   },
 };
+
+export default config;

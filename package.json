@@ -1,7 +1,8 @@
 {
   "name": "stylelint-config-hope",
-  "version": "4.1.0",
+  "version": "5.0.0",
   "description": "Shareable config for Stylelint",
+  "type": "module",
   "keywords": [
     "stylelint",
     "stylelint-config"
@@ -20,24 +21,34 @@
     "name": "Mr.Hope",
     "url": "https://mister-hope.com"
   },
-  "main": "index.js",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "exports": {
+    ".": {
+      "require": "./dist/index.cjs",
+      "default": "./dist/index.js"
+    }
+  },
   "files": [
-    "index.js"
+    "dist"
   ],
   "scripts": {
+    "build": "rollup -c rollup.config.ts --configPlugin esbuild",
     "lint": "prettier --check --write ."
   },
   "dependencies": {
-    "postcss": "^8.4.31",
-    "stylelint-config-standard-scss": "^11.0.0",
-    "stylelint-order": "^6.0.3"
+    "postcss": "^8.4.32",
+    "stylelint-config-standard-scss": "^12.0.0",
+    "stylelint-order": "^6.0.4"
   },
   "peerDependencies": {
-    "stylelint": "^15.10.0"
+    "stylelint": "^16.0.0"
   },
-  "packageManager": "pnpm@8.9.0",
   "devDependencies": {
-    "prettier": "3.0.3",
-    "stylelint": "15.11.0"
-  }
+    "rollup": "4.9.0",
+    "rollup-plugin-esbuild": "6.1.0",
+    "prettier": "3.1.1",
+    "stylelint": "16.0.2"
+  },
+  "packageManager": "pnpm@8.12.1"
 }
