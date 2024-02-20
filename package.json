@@ -37,17 +37,17 @@
     "lint": "prettier --check --write ."
   },
   "dependencies": {
-    "stylelint-config-standard-scss": "^12.0.0",
+    "stylelint-config-standard-scss": "^13.0.0",
     "stylelint-order": "^6.0.4"
   },
   "peerDependencies": {
     "stylelint": "^16.0.0"
   },
   "devDependencies": {
-    "rollup": "4.9.0",
-    "rollup-plugin-esbuild": "6.1.0",
-    "prettier": "3.1.1",
-    "stylelint": "16.0.2"
+    "rollup": "4.12.0",
+    "rollup-plugin-esbuild": "6.1.1",
+    "prettier": "3.2.5",
+    "stylelint": "16.2.1"
   },
-  "packageManager": "pnpm@8.12.1"
+  "packageManager": "pnpm@8.15.3"
 }
