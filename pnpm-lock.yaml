@@ -9,7 +9,7 @@ importers:
   .:
     dependencies:
       stylelint-config-standard-scss:
-        specifier: ^13.0.0
+        specifier: ^13.1.0
         version: 13.1.0(postcss@8.4.38)(stylelint@16.3.1)
       stylelint-order:
         specifier: ^6.0.4
@@ -261,36 +261,43 @@ packages:
     resolution: {integrity: sha512-iypHsz7YEfoyNL0iHbQ7B7pY6hpymvvMgFXXaMd5+WCtvJ9zqWPZKFmo78UeWzWNmTP9JtPiNIQt6efRxx/MNA==}
     cpu: [arm64]
     os: [linux]
+    libc: [glibc]
 
   '@rollup/rollup-linux-arm64-musl@4.16.0':
     resolution: {integrity: sha512-7UpYcO0uVeomnoL5MpQhrS0FT7xZUJrEXtKVLmps5bRA7x5AiA1PDuPnMbxcOBWjIM2HHIG1t3ndnRTVMIbk5A==}
     cpu: [arm64]
     os: [linux]
+    libc: [musl]
 
   '@rollup/rollup-linux-powerpc64le-gnu@4.16.0':
     resolution: {integrity: sha512-FSuFy4/hOQy0lH135ifnElP/6dKoHcZGHovsaRY0jrfNRR2yjMnVYaqNHKGKy0b/1I8DkD/JtclgJfq7SPti1w==}
     cpu: [ppc64]
     os: [linux]
+    libc: [glibc]
 
   '@rollup/rollup-linux-riscv64-gnu@4.16.0':
     resolution: {integrity: sha512-qxAB8MiHuDI8jU0D+WI9Gym3fvUJHA/AjKRXxbEH921SB3AeKQStq1FKFA59dAoqqCArjJ1voXM/gMvgEc1q4Q==}
     cpu: [riscv64]
     os: [linux]
+    libc: [glibc]
 
   '@rollup/rollup-linux-s390x-gnu@4.16.0':
     resolution: {integrity: sha512-j/9yBgWFlNFBfG/S1M2zkBNLeLkNVG59T5c4tlmlrxU+XITWJ3aMVWdpcZ/+mu7auGZftAXueAgAE9mb4lAlag==}
     cpu: [s390x]
     os: [linux]
+    libc: [glibc]
 
   '@rollup/rollup-linux-x64-gnu@4.16.0':
     resolution: {integrity: sha512-SjsBA1a9wrEleNneGEsR40HdxKdwCatyHC547o/XINqwPW4cqTYiNy/lL1WTJYWU/KgWIb8HH4SgmFStbWoBzw==}
     cpu: [x64]
     os: [linux]
+    libc: [glibc]
 
   '@rollup/rollup-linux-x64-musl@4.16.0':
     resolution: {integrity: sha512-YKCs7ghJZ5po6/qgfONiXyFKOKcTK4Kerzk/Kc89QK0JT94Qg4NurL+3Y3rZh5am2tu1OlvHPpBHQNBE8cFgJQ==}
     cpu: [x64]
     os: [linux]
+    libc: [musl]
 
   '@rollup/rollup-win32-arm64-msvc@4.16.0':
     resolution: {integrity: sha512-+wtkF+z2nw0ZwwHji01wOW0loxFl24lBNxPtVAXtnPPDL9Ew0EhiCMOegXe/EAH3Zlr8Iw9tyPJXB3DltQLEyw==}
