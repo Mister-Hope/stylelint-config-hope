@@ -424,7 +424,7 @@ const config: Config = {
         severity: "warning",
       },
     ],
-    "scss/at-import-partial-extension-blacklist": ["scss"],
+    "scss/at-import-partial-extension-disallowed-list": ["scss"],
     "scss/selector-no-redundant-nesting-selector": true,
   },
 };
