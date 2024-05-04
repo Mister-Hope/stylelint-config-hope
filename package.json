@@ -47,7 +47,7 @@
     "rollup": "4.17.2",
     "rollup-plugin-esbuild": "6.1.1",
     "prettier": "3.2.5",
-    "stylelint": "16.4.0"
+    "stylelint": "16.5.0"
   },
   "packageManager": "pnpm@9.0.5"
 }
