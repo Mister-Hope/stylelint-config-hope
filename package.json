@@ -45,10 +45,10 @@
     "stylelint": "^16.8.1"
   },
   "devDependencies": {
-    "rollup": "4.21.3",
+    "rollup": "4.22.0",
     "rollup-plugin-esbuild": "6.1.1",
     "prettier": "3.3.3",
     "stylelint": "16.9.0"
   },
-  "packageManager": "pnpm@9.6.0"
+  "packageManager": "pnpm@9.10.0"
 }
