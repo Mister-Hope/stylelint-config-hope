@@ -7,6 +7,9 @@ const config: Config = {
   extends: ["stylelint-config-standard"],
   plugins: ["stylelint-order"],
   rules: {
+    // disabled for properties order
+    "declaration-empty-line-before": null,
+
     // new rules
     "color-hex-alpha": "never",
     "color-hex-length": "short",
@@ -31,7 +34,7 @@ const config: Config = {
   },
   overrides: [
     {
-      files: ["*.scss", "**/*.scss"],
+      files: ["*.scss", "**/*.scss", "*.vue", "**/*.vue"],
       ...scss,
     },
   ],
