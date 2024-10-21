@@ -79,6 +79,10 @@ const config: Config = {
         },
         "declarations",
         {
+          type: "rule",
+          selector: "^&$",
+        },
+        {
           type: "at-rule",
           name: "supports",
         },
@@ -113,6 +117,16 @@ const config: Config = {
     "scss/at-import-partial-extension-disallowed-list": ["scss"],
     "scss/selector-no-redundant-nesting-selector": true,
   },
+  overrides: [
+    {
+      files: ["*.scss", "**/*.scss"],
+      rules: {
+        // See https://github.com/stylelint/stylelint/issues/7893
+        // Should be disabled once mixed-declaration is not warned
+        "no-duplicate-selectors": null,
+      },
+    },
+  ],
 };
 
 export default config;
