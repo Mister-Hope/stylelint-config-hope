@@ -1,16 +1,4 @@
-import { Config } from "stylelint";
-
-type PropertyOrderGroupConfig = {
-  properties: string[];
-  emptyLineBefore?: "always" | "never" | "threshold";
-  noEmptyLineBetween?: boolean;
-  groupName?: string;
-  order?: "flexible";
-};
-
-type PropertyOrderConfig = string | PropertyOrderGroupConfig;
-
-type PropertyOrderPrimaryConfig = (string | PropertyOrderConfig)[];
+import type { PropertiesOrderOptions } from "./typings.js";
 
 const getLogicalShortHandDirections = (prefix: string): string[] => [
   `${prefix}-block`,
@@ -62,7 +50,7 @@ const getAlign = (prefix: string): string[] => [
   `${prefix}-self`,
 ];
 
-export const propertiesOrderConfig: PropertyOrderPrimaryConfig = [
+export const propertiesOrderOptions: PropertiesOrderOptions = [
   "all",
   "content",
   "counter-increment",
@@ -666,40 +654,3 @@ export const propertiesOrderConfig: PropertyOrderPrimaryConfig = [
     ],
   },
 ];
-
-const orderConfig: Config = {
-  plugins: ["stylelint-order"],
-  rules: {
-    "order/order": [
-      [
-        "custom-properties",
-        "at-rules",
-        "declarations",
-        {
-          type: "at-rule",
-          name: "supports",
-        },
-        {
-          type: "at-rule",
-          name: "media",
-        },
-        "rules",
-      ],
-      {
-        unspecified: "ignore",
-        severity: "warning",
-      },
-    ],
-    "order/properties-order": [
-      propertiesOrderConfig,
-      {
-        unspecified: "bottomAlphabetical",
-        emptyLineBeforeUnspecified: "threshold",
-        emptyLineMinimumPropertyThreshold: 5,
-        severity: "warning",
-      },
-    ],
-  },
-};
-
-export default orderConfig;

@@ -1,0 +1,23 @@
+@mixin test {
+  color: #f00;
+
+  @media (width >= 768px) {
+    color: #00f;
+  }
+}
+
+.test {
+  @include test;
+
+  & {
+    color: #ff0;
+  }
+
+  @media (width >= 768px) {
+    color: #0ff;
+  }
+
+  .test & {
+    color: #fff;
+  }
+}

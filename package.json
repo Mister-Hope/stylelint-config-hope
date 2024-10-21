@@ -35,7 +35,8 @@
   "scripts": {
     "build": "rollup -c rollup.config.ts --configPlugin esbuild",
     "lint": "prettier --check --write .",
-    "prepublish": "pnpm build"
+    "prepublish": "pnpm build",
+    "test": "stylelint test/**"
   },
   "dependencies": {
     "stylelint-config-standard-scss": "^13.1.0",
