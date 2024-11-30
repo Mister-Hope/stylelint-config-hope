@@ -48,7 +48,7 @@
   "devDependencies": {
     "rollup": "4.27.4",
     "rollup-plugin-esbuild": "6.1.1",
-    "prettier": "3.3.3",
+    "prettier": "3.4.1",
     "stylelint": "16.10.0"
   },
   "packageManager": "pnpm@9.14.3"
