@@ -56,5 +56,5 @@
       "esbuild"
     ]
   },
-  "packageManager": "pnpm@10.2.1"
+  "packageManager": "pnpm@10.4.1"
 }
