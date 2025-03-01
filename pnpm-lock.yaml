@@ -22,8 +22,8 @@ importers:
         specifier: 4.34.8
         version: 4.34.8
       rollup-plugin-esbuild:
-        specifier: 6.2.0
-        version: 6.2.0(esbuild@0.25.0)(rollup@4.34.8)
+        specifier: 6.2.1
+        version: 6.2.1(esbuild@0.25.0)(rollup@4.34.8)
       stylelint:
         specifier: 16.14.1
         version: 16.14.1
@@ -697,8 +697,8 @@ packages:
     resolution: {integrity: sha512-U9nH88a3fc/ekCF1l0/UP1IosiuIjyTh7hBvXVMHYgVcfGvt897Xguj2UOLDeI5BG2m7/uwyaLVT6fbtCwTyzw==}
     engines: {iojs: '>=1.0.0', node: '>=0.10.0'}
 
-  rollup-plugin-esbuild@6.2.0:
-    resolution: {integrity: sha512-LbkHaCahA6ceyWzAd6md2yajNS+HfZmZ5o58ShkZp0cQeZOnZECG2D2xWFNBq5SF6X6pfMK2udkZ+wRtvpzyVQ==}
+  rollup-plugin-esbuild@6.2.1:
+    resolution: {integrity: sha512-jTNOMGoMRhs0JuueJrJqbW8tOwxumaWYq+V5i+PD+8ecSCVkuX27tGW7BXqDgoULQ55rO7IdNxPcnsWtshz3AA==}
     engines: {node: '>=14.18.0'}
     peerDependencies:
       esbuild: '>=0.18.0'
@@ -1314,7 +1314,7 @@ snapshots:
 
   reusify@1.0.4: {}
 
-  rollup-plugin-esbuild@6.2.0(esbuild@0.25.0)(rollup@4.34.8):
+  rollup-plugin-esbuild@6.2.1(esbuild@0.25.0)(rollup@4.34.8):
     dependencies:
       debug: 4.4.0
       es-module-lexer: 1.6.0
