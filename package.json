@@ -40,7 +40,7 @@
   },
   "dependencies": {
     "stylelint-config-standard-scss": "^14.0.0",
-    "stylelint-order": "^6.0.4"
+    "stylelint-order": "^7.0.0"
   },
   "peerDependencies": {
     "stylelint": "^16.18.0"
