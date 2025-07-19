@@ -46,7 +46,7 @@
     "stylelint": "^16.18.0"
   },
   "devDependencies": {
-    "rollup": "4.45.0",
+    "rollup": "4.45.1",
     "rollup-plugin-esbuild": "6.2.1",
     "prettier": "3.6.2",
     "stylelint": "16.21.1"
