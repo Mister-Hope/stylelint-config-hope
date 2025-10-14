@@ -39,7 +39,7 @@
     "test": "stylelint tests/**/*.scss"
   },
   "dependencies": {
-    "stylelint-config-standard-scss": "^15.0.1",
+    "stylelint-config-standard-scss": "^16.0.0",
     "stylelint-order": "^7.0.0"
   },
   "peerDependencies": {
@@ -56,5 +56,5 @@
       "esbuild"
     ]
   },
-  "packageManager": "pnpm@10.13.1"
+  "packageManager": "pnpm@10.18.3"
 }
