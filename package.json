@@ -1,6 +1,6 @@
 {
   "name": "stylelint-config-hope",
-  "version": "9.1.0",
+  "version": "10.0.0",
   "description": "Shareable config for Stylelint",
   "type": "module",
   "keywords": [
