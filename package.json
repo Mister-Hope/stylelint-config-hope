@@ -39,7 +39,7 @@
     "test": "stylelint tests/**/*.scss"
   },
   "dependencies": {
-    "stylelint-config-standard-scss": "^16.0.0",
+    "stylelint-config-standard-scss": "^17.0.0",
     "stylelint-order": "^7.0.0"
   },
   "peerDependencies": {
