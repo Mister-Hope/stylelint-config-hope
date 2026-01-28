@@ -1,3 +1,4 @@
+// oxlint-disable max-lines
 import type { PropertiesOrderOptions } from "./typings.js";
 
 const getLogicalShortHandDirections = (prefix: string): string[] => [
@@ -38,11 +39,7 @@ const getAllDirections = (prefix: string): string[] => [
   ...getLogicalDirections(prefix, false),
 ];
 
-const getMinMax = (prefix: string): string[] => [
-  prefix,
-  `min-${prefix}`,
-  `max-${prefix}`,
-];
+const getMinMax = (prefix: string): string[] => [prefix, `min-${prefix}`, `max-${prefix}`];
 
 const getAlign = (prefix: string): string[] => [
   `${prefix}-content`,
@@ -170,7 +167,7 @@ export const propertiesOrderOptions: PropertiesOrderOptions = [
       "border-spacing",
       "border-collapse",
       ...getAllDirections("border")
-        .flatMap(getBorderProperties)
+        .flatMap((direction) => getBorderProperties(direction))
         // remove border
         .slice(1),
 

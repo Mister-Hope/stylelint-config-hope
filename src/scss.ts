@@ -3,6 +3,8 @@ export const scss = {
   rules: {
     // Add warning for @debug usage
     "at-rule-disallowed-list": ["debug"],
+    // sass @include may require & { } after it
+    "block-no-redundant-nested-style-rules": null,
     // disable empty line before declaration to support sass at rules
     "declaration-empty-line-before": null,
     // add sass flow control

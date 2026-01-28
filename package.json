@@ -2,7 +2,6 @@
   "name": "stylelint-config-hope",
   "version": "10.0.0",
   "description": "Shareable config for Stylelint",
-  "type": "module",
   "keywords": [
     "stylelint",
     "stylelint-config"
@@ -11,50 +10,57 @@
   "bugs": {
     "url": "https://github.com/Mister-Hope/stylelint-config-hope/issues"
   },
+  "license": "MIT",
+  "author": {
+    "name": "Mr.Hope",
+    "email": "mister-hope@outlook.com",
+    "url": "https://mister-hope.com"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Mister-Hope/stylelint-config-hope.git"
   },
-  "license": "MIT",
-  "author": {
-    "email": "mister-hope@outlook.com",
-    "name": "Mr.Hope",
-    "url": "https://mister-hope.com"
-  },
-  "main": "./dist/index.cjs",
-  "module": "./dist/index.js",
-  "exports": {
-    ".": {
-      "require": "./dist/index.cjs",
-      "default": "./dist/index.js"
-    }
-  },
   "files": [
     "dist"
   ],
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.cts",
+  "exports": {
+    ".": {
+      "require": "./dist/index.cjs",
+      "import": "./dist/index.js"
+    }
+  },
   "scripts": {
-    "build": "rollup -c rollup.config.ts --configPlugin esbuild",
-    "lint": "prettier --check --write .",
+    "build": "tsdown",
+    "lint": "oxlint && oxfmt",
+    "prepare": "husky",
     "prepublish": "pnpm build",
     "test": "stylelint tests/**/*.scss"
   },
   "dependencies": {
-    "stylelint-config-standard-scss": "^16.0.0",
-    "stylelint-order": "^7.0.0"
+    "stylelint-config-standard": "^40.0.0",
+    "stylelint-config-standard-scss": "^17.0.0",
+    "stylelint-order": "^7.0.1"
+  },
+  "devDependencies": {
+    "husky": "9.1.7",
+    "nano-staged": "0.9.0",
+    "oxfmt": "0.27.0",
+    "oxlint": "1.42.0",
+    "oxlint-tsgolint": "0.11.2",
+    "stylelint": "17.0.0",
+    "tsdown": "0.20.1",
+    "typescript": "5.9.3"
   },
   "peerDependencies": {
     "stylelint": "^16.18.0"
   },
-  "devDependencies": {
-    "rollup": "4.52.4",
-    "rollup-plugin-esbuild": "6.2.1",
-    "prettier": "3.6.2",
-    "stylelint": "16.25.0"
+  "nano-staged": {
+    "**/*": "oxfmt --no-error-on-unmatched-pattern",
+    "*.{js,ts}": "oxlint"
   },
-  "pnpm": {
-    "onlyBuiltDependencies": [
-      "esbuild"
-    ]
-  },
-  "packageManager": "pnpm@10.18.3"
+  "packageManager": "pnpm@10.28.2"
 }

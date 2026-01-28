@@ -1,0 +1,13 @@
+{
+  "$schema": "./node_modules/oxfmt/configuration_schema.json",
+  "ignorePatterns": [
+    "coverage/",
+    "packages/*/lib/**",
+    ".vuepress/.cache/**",
+    ".vuepress/.temp/**",
+    ".vuepress/dist/**"
+  ],
+  "experimentalSortPackageJson": {
+    "sortScripts": true
+  }
+}
