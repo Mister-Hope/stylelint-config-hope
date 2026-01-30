@@ -35,7 +35,8 @@
   },
   "scripts": {
     "build": "tsdown",
-    "lint": "oxlint && oxfmt",
+    "lint": "oxlint --fix --type-aware --type-check --report-unused-disable-directives --deny-warnings && oxfmt",
+    "lint:check": "oxlint --type-aware --type-check --report-unused-disable-directives --deny-warnings && oxfmt --check",
     "prepare": "husky",
     "prepublish": "pnpm build",
     "test": "stylelint tests/**/*.scss"
@@ -60,7 +61,7 @@
   },
   "nano-staged": {
     "**/*": "oxfmt --no-error-on-unmatched-pattern",
-    "*.{js,ts}": "oxlint"
+    "*.{js,ts}": "oxlint --fix --type-aware --type-check --deny-warnings --report-unused-disable-directives"
   },
   "packageManager": "pnpm@10.28.2"
 }

@@ -1,4 +1,4 @@
-import { Config } from "stylelint";
+import type { Config } from "stylelint";
 
 import { orderRules } from "./order/index.js";
 import { scss } from "./scss.js";
@@ -17,13 +17,7 @@ const config: Config = {
     "max-nesting-depth": [
       3,
       {
-        ignoreAtRules: [
-          "blockless-at-rules",
-          "pseudo-classes",
-          "media",
-          "print",
-          "supports",
-        ],
+        ignoreAtRules: ["blockless-at-rules", "pseudo-classes", "media", "print", "supports"],
       },
     ],
     "selector-max-attribute": 2,
