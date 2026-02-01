@@ -51,13 +51,13 @@
     "nano-staged": "0.9.0",
     "oxfmt": "0.27.0",
     "oxlint": "1.42.0",
-    "oxlint-tsgolint": "0.11.2",
-    "stylelint": "17.0.0",
+    "oxlint-tsgolint": "0.11.4",
+    "stylelint": "17.1.0",
     "tsdown": "0.20.1",
     "typescript": "5.9.3"
   },
   "peerDependencies": {
-    "stylelint": "^16.18.0"
+    "stylelint": "^17.0.0"
   },
   "nano-staged": {
     "**/*": "oxfmt --no-error-on-unmatched-pattern",
