@@ -49,11 +49,11 @@
   "devDependencies": {
     "husky": "9.1.7",
     "nano-staged": "0.9.0",
-    "oxfmt": "0.27.0",
-    "oxlint": "1.42.0",
+    "oxfmt": "0.28.0",
+    "oxlint": "1.43.0",
     "oxlint-tsgolint": "0.11.4",
-    "stylelint": "17.1.0",
-    "tsdown": "0.20.1",
+    "stylelint": "17.1.1",
+    "tsdown": "0.20.3",
     "typescript": "5.9.3"
   },
   "peerDependencies": {
@@ -63,5 +63,5 @@
     "**/*": "oxfmt --no-error-on-unmatched-pattern",
     "*.{js,ts}": "oxlint --fix --type-aware --type-check --deny-warnings --report-unused-disable-directives"
   },
-  "packageManager": "pnpm@10.28.2"
+  "packageManager": "pnpm@10.29.1"
 }
