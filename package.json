@@ -51,7 +51,7 @@
     "nano-staged": "0.9.0",
     "oxfmt": "0.32.0",
     "oxlint": "1.47.0",
-    "oxlint-tsgolint": "0.13.0",
+    "oxlint-tsgolint": "0.14.2",
     "stylelint": "17.3.0",
     "tsdown": "0.20.3",
     "typescript": "5.9.3"
