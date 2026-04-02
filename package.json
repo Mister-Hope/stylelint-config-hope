@@ -29,29 +29,31 @@
   "types": "./dist/index.d.cts",
   "exports": {
     ".": {
-      "require": "./dist/index.cjs",
-      "import": "./dist/index.js"
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
     }
   },
   "scripts": {
     "build": "tsdown",
-    "lint": "oxlint --fix --type-aware --type-check --report-unused-disable-directives --deny-warnings && oxfmt",
-    "lint:check": "oxlint --type-aware --type-check --report-unused-disable-directives --deny-warnings && oxfmt --check",
+    "lint": "oxlint --fix --report-unused-disable-directives --deny-warnings && oxfmt",
+    "lint:check": "oxlint --report-unused-disable-directives --deny-warnings && oxfmt --check",
     "prepare": "husky",
-    "prepublish": "pnpm build",
+    "prepublish": "pnpm run build",
     "test": "stylelint tests/**/*.scss"
   },
   "dependencies": {
     "stylelint-config-standard": "^40.0.0",
     "stylelint-config-standard-scss": "^17.0.0",
-    "stylelint-order": "^7.0.1"
+    "stylelint-order": "^8.1.1"
   },
   "devDependencies": {
+    "@mr-hope/tsconfig": "0.0.3",
     "husky": "9.1.7",
     "nano-staged": "0.9.0",
-    "oxfmt": "0.42.0",
-    "oxlint": "1.57.0",
-    "oxlint-tsgolint": "0.18.1",
+    "oxc-config-hope": "0.1.6",
+    "oxfmt": "0.43.0",
+    "oxlint": "1.58.0",
+    "oxlint-tsgolint": "0.19.0",
     "stylelint": "17.6.0",
     "tsdown": "0.21.7",
     "typescript": "6.0.2"
@@ -61,7 +63,7 @@
   },
   "nano-staged": {
     "**/*": "oxfmt --no-error-on-unmatched-pattern",
-    "*.{js,ts}": "oxlint --fix --type-aware --type-check --deny-warnings --report-unused-disable-directives"
+    "*.{js,ts}": "oxlint --fix --deny-warnings --report-unused-disable-directives"
   },
-  "packageManager": "pnpm@10.31.0"
+  "packageManager": "pnpm@10.33.0"
 }
