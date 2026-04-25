@@ -19,8 +19,8 @@ importers:
         version: 8.1.1(stylelint@17.8.0(typescript@6.0.3))
     devDependencies:
       '@mr-hope/tsconfig':
-        specifier: 0.0.3
-        version: 0.0.3(typescript@6.0.3)
+        specifier: 0.0.4
+        version: 0.0.4(typescript@6.0.3)
       husky:
         specifier: 9.1.7
         version: 9.1.7
@@ -161,8 +161,8 @@ packages:
   '@keyv/serialize@1.1.1':
     resolution: {integrity: sha512-dXn3FZhPv0US+7dtJsIi2R+c7qWYiReoEh5zUntWCf4oSpMNib8FDhSoed6m3QyZdx5hK7iLFkYk3rNxwt8vTA==}
 
-  '@mr-hope/tsconfig@0.0.3':
-    resolution: {integrity: sha512-dpgwNf6puCRKL+JiR1CIXxlpon4eM/0yZN0c6W2riE4St/A+hu+GdbpLD9tgsGQw3E9abKj98mDTapt29Yg01g==}
+  '@mr-hope/tsconfig@0.0.4':
+    resolution: {integrity: sha512-sHD3OmpHV4hxZDTjdp/0hyUifITCwEN4xHvYQkl779mtpeDZOVj69kj+SJ5+nav+3m9EUx4Q1MgxzQbZlaxwPA==}
     engines: {node: '>=20.0.0'}
     peerDependencies:
       typescript: '>=5.4.0'
@@ -1344,7 +1344,7 @@ snapshots:
 
   '@keyv/serialize@1.1.1': {}
 
-  '@mr-hope/tsconfig@0.0.3(typescript@6.0.3)':
+  '@mr-hope/tsconfig@0.0.4(typescript@6.0.3)':
     dependencies:
       typescript: 6.0.3
 
