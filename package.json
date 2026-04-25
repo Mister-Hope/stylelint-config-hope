@@ -47,7 +47,7 @@
     "stylelint-order": "^8.1.1"
   },
   "devDependencies": {
-    "@mr-hope/tsconfig": "0.0.3",
+    "@mr-hope/tsconfig": "0.0.4",
     "husky": "9.1.7",
     "nano-staged": "1.0.2",
     "oxc-config-hope": "0.3.0",
