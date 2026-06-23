@@ -24,6 +24,9 @@
     "dist"
   ],
   "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.cts",
   "exports": {
     ".": {
       "import": "./dist/index.js",
@@ -47,12 +50,12 @@
     "@mr-hope/tsconfig": "0.0.4",
     "husky": "9.1.7",
     "nano-staged": "1.0.2",
-    "oxc-config-hope": "0.3.4",
-    "oxfmt": "0.52.0",
-    "oxlint": "1.64.0",
-    "oxlint-tsgolint": "0.22.1",
-    "stylelint": "17.11.0",
-    "tsdown": "0.22.0",
+    "oxc-config-hope": "0.3.9",
+    "oxfmt": "0.56.0",
+    "oxlint": "1.71.0",
+    "oxlint-tsgolint": "0.23.0",
+    "stylelint": "17.13.0",
+    "tsdown": "0.22.3",
     "typescript": "6.0.3"
   },
   "peerDependencies": {
@@ -65,12 +68,12 @@
   "devEngines": {
     "packageManager": {
       "name": "pnpm",
-      "version": "11.0.9",
+      "version": "11.8.0",
       "onFail": "download"
     },
     "runtime": {
       "name": "node",
-      "version": "^24.15.0",
+      "version": "^22.22.0 || ^24.16.0 || ^26.3.0",
       "onFail": "error"
     }
   },
