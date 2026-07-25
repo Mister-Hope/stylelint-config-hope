@@ -53,7 +53,7 @@
     "oxc-config-hope": "0.3.9",
     "oxfmt": "0.60.0",
     "oxlint": "1.75.0",
-    "oxlint-tsgolint": "0.25.0",
+    "oxlint-tsgolint": "7.0.2001",
     "stylelint": "17.14.1",
     "tsdown": "0.22.14",
     "typescript": "7.0.2"
