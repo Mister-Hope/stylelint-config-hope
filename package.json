@@ -54,7 +54,7 @@
     "oxfmt": "0.59.0",
     "oxlint": "1.74.0",
     "oxlint-tsgolint": "0.25.0",
-    "stylelint": "17.14.0",
+    "stylelint": "17.14.1",
     "tsdown": "0.22.12",
     "typescript": "7.0.2"
   },
