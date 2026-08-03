@@ -1,4 +1,6 @@
-export const scss = {
+import type { Override } from "./typings.js";
+
+export const scssConfig: Omit<Override, "files"> = {
   extends: ["stylelint-config-standard-scss"],
   rules: {
     // Add warning for @debug usage

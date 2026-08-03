@@ -1,37 +1,77 @@
 import type { Config } from "stylelint";
 
 import { orderRules } from "./order/index.js";
-import { scss } from "./scss.js";
+import { scssConfig } from "./scss.js";
+import type { Rules } from "./typings.js";
 
-const config: Config = {
-  extends: ["stylelint-config-standard"],
-  plugins: ["stylelint-order"],
-  rules: {
-    // disabled for properties order
-    "declaration-empty-line-before": null,
+export { scssConfig } from "./scss.js";
 
-    // new rules
-    "color-hex-alpha": "never",
-    "color-hex-length": "short",
-    "color-named": "never",
-    "max-nesting-depth": [
-      3,
-      {
-        ignoreAtRules: ["blockless-at-rules", "pseudo-classes", "media", "print", "supports"],
-      },
-    ],
-    "selector-max-attribute": 2,
-    "selector-max-class": 4,
-    "selector-max-compound-selectors": 4,
-    "selector-max-id": 1,
-    ...orderRules,
-  },
-  overrides: [
+export const defaultRules: Rules = {
+  // disabled for properties order
+  "declaration-empty-line-before": null,
+
+  // new rules
+  "color-hex-alpha": "never",
+  "color-hex-length": "short",
+  "color-named": "never",
+  "max-nesting-depth": [
+    3,
     {
-      files: ["*.scss", "**/*.scss", "*.vue", "**/*.vue"],
-      ...scss,
+      ignoreAtRules: ["blockless-at-rules", "pseudo-classes", "media", "print", "supports"],
     },
   ],
+  "selector-max-attribute": 2,
+  "selector-max-class": 4,
+  "selector-max-compound-selectors": 4,
+  "selector-max-id": 1,
+  ...orderRules,
 };
 
-export default config;
+export interface HopeStylelintOptions extends Config {
+  scss?: boolean;
+  vue?: boolean;
+  scssInVue?: boolean;
+}
+
+export const defineHopeConfig = ({
+  rules = {},
+  scss = false,
+  vue = false,
+  scssInVue = false,
+  overrides = [],
+  ...rest
+}: HopeStylelintOptions = {}): Config => {
+  const finalOverrides = [...overrides];
+
+  if (vue) {
+    finalOverrides.unshift({
+      files: ["**/*.vue"],
+      customSyntax: "postcss-html",
+    });
+  }
+
+  if (scss) {
+    if (vue && scssInVue) {
+      finalOverrides[0] = {
+        ...finalOverrides[0],
+        ...scssConfig,
+      };
+    }
+
+    finalOverrides.unshift({
+      files: ["**/*.scss"],
+      ...scssConfig,
+    });
+  }
+
+  return {
+    extends: ["stylelint-config-standard"],
+    plugins: ["stylelint-order"],
+    ...rest,
+    rules: {
+      ...defaultRules,
+      ...rules,
+    },
+    overrides: finalOverrides,
+  };
+};
