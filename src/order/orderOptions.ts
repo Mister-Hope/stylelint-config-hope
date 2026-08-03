@@ -13,9 +13,9 @@ export const orderOptions: OrderOptions = [
     type: "at-rule",
     name: "supports",
   },
+  "rules",
   {
     type: "at-rule",
     name: "media",
   },
-  "rules",
 ];
