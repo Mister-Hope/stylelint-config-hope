@@ -4,11 +4,14 @@ export default defineConfig({
   entry: "./src/index.ts",
   outDir: "./dist",
   format: ["cjs", "esm"],
-  exports: {
-    packageJson: false,
-  },
   fixedExtension: false,
-  target: "node20",
+  target: "node22",
   dts: true,
   minify: true,
+  shims: true,
+  cjsDefault: false,
+  deps: {
+    alwaysBundle: ["import-meta-resolve"],
+    onlyBundle: false,
+  },
 });

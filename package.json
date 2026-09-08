@@ -48,13 +48,15 @@
   },
   "devDependencies": {
     "@mr-hope/tsconfig": "0.0.4",
+    "@types/node": "^22.20.1",
     "husky": "9.1.7",
+    "import-meta-resolve": "^4.2.0",
     "nano-staged": "1.0.2",
-    "oxc-config-hope": "0.3.12",
-    "oxfmt": "0.66.0",
-    "oxlint": "1.77.0",
+    "oxc-config-hope": "0.3.13",
+    "oxfmt": "0.67.0",
+    "oxlint": "1.82.0",
     "oxlint-tsgolint": "7.0.2001",
-    "stylelint": "17.14.1",
+    "stylelint": "17.15.0",
     "tsdown": "0.23.0",
     "typescript": "7.0.2"
   },
@@ -74,16 +76,19 @@
   "devEngines": {
     "packageManager": {
       "name": "pnpm",
-      "version": "11.19.0",
+      "version": "12.3.4",
       "onFail": "download"
     },
     "runtime": {
       "name": "node",
-      "version": "^22.22.0 || ^24.16.0 || ^26.3.0",
+      "version": "^22.22.0 || ^24.20.0 || ^26.3.0",
       "onFail": "error"
     }
   },
   "engines": {
     "node": ">=22"
+  },
+  "inlinedDependencies": {
+    "import-meta-resolve": "4.2.0"
   }
 }

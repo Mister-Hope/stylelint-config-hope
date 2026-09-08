@@ -1,6 +1,7 @@
 import type { Config } from "stylelint";
 
 import { orderRules } from "./order/index.js";
+import { orderPlugin, standardConfig } from "./paths.js";
 import { scssConfig } from "./scss.js";
 import type { Rules } from "./typings.js";
 
@@ -65,8 +66,8 @@ export const defineHopeConfig = ({
   }
 
   return {
-    extends: ["stylelint-config-standard"],
-    plugins: ["stylelint-order"],
+    extends: [standardConfig],
+    plugins: [orderPlugin],
     ...rest,
     rules: {
       ...defaultRules,
@@ -75,3 +76,8 @@ export const defineHopeConfig = ({
     overrides: finalOverrides,
   };
 };
+
+// Default export so that `extends: ["stylelint-config-hope"]` in a
+// stylelintrc file keeps working, matching the pre-v12 behavior.
+// SCSS and Vue support are enabled to preserve the old defaults.
+export default defineHopeConfig({ scss: true, vue: true, scssInVue: true });
