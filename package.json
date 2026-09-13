@@ -48,7 +48,7 @@
   },
   "devDependencies": {
     "@mr-hope/tsconfig": "0.0.4",
-    "@types/node": "^22.20.1",
+    "@types/node": "^24.0.0",
     "husky": "9.1.7",
     "import-meta-resolve": "^4.2.0",
     "nano-staged": "1.0.2",
