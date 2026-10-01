@@ -1,12 +1,15 @@
-enableGlobalVirtualStore: true
+virtualStoreType: global
 
 minimumReleaseAgeExclude:
+  - "@mr-hope/*"
   - "@oxfmt/*"
   - "@oxlint/*"
-  - oxc-config-hope
-  - oxfmt
-  - oxlint
+  - "oxc-config-hope"
+  - "oxfmt"
+  - "oxlint"
 
 trustPolicy: no-downgrade
 
 trustPolicyIgnoreAfter: 720
+minimumReleaseAgeExcludePrune: true
+trustPolicyExcludePrune: true

@@ -1,5 +1,13 @@
 export default {
-  cooldown: 1,
+  cooldown: (pkg) => {
+    if (
+      ["@mr-hope/", "@oxfmt/", "@oxlint/"].some((prefix) => pkg.startsWith(prefix)) ||
+      ["oxc-config-hope", "oxfmt", "oxlint"].includes(pkg)
+    )
+      return 0;
+
+    return 1;
+  },
   peer: true,
   upgrade: true,
   timeout: 360000,
