@@ -4,12 +4,10 @@ minimumReleaseAgeExclude:
   - "@mr-hope/*"
   - "@oxfmt/*"
   - "@oxlint/*"
-  - "oxc-config-hope"
-  - "oxfmt"
-  - "oxlint"
-
-trustPolicy: no-downgrade
-
-trustPolicyIgnoreAfter: 720
+  - oxc-config-hope
+  - oxfmt
+  - oxlint
 minimumReleaseAgeExcludePrune: true
+trustPolicy: no-downgrade
+trustPolicyIgnoreAfter: 720
 trustPolicyExcludePrune: true
